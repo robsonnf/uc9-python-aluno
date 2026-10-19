@@ -1,0 +1,13 @@
+{
+  "name": "uc9-python-desktop-aluno",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "UC9 Python desktop — material do aluno.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node scripts/servir.mjs"
+  }
+}

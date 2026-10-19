@@ -1,0 +1,18 @@
+UC09 — ALUNO
+92 horas / 31 encontros. Aulas disponíveis neste pacote: A01, A02.
+Extraia o ZIP inteiro. Execute npm start nesta pasta ou abra index.html diretamente.
+Node.js 18+; servidor sem dependências, sem npm install. Ctrl+C encerra o servidor.
+P alterna a grade; o botão de apresentação amplia a leitura.
+Página e arquivos locais offline; instalações e fontes externas podem precisar de internet.
+Prática: Python no computador, IDE e PowerShell. Não há execução Python no navegador.
+Recarregar limpa as respostas; exporte antes de fechar. O download não envia nada ao professor.
+A01: 180 minutos, incluindo 15 de pausa. Abra atividades/A01/inicial.
+Execute python primeiro_programa.py, python leitura.py e python diagnostico.py.
+Sem pacotes Python externos na A01. PENDENTE no arquivo inicial é uma lacuna intencional.
+Registre em atividades/A01/evidencias.md; entregue o registro exportado e seus arquivos Python.
+A02: 180 minutos, incluindo 15 de pausa. Atividades em atividades/A02/.
+Abra guia-ferramentas.md e preencha briefing.md, requisitos.md, backlog.md e evidencias.md numa pasta nova da equipe. Use dados-sinteticos.csv.
+Trabalhe com IDE/editor e PowerShell; Git local quando disponível. Não há programa Python para implementar ou executar na A02.
+Auditoria de CSS é um bloco complementar de leitura da página; não é a interface do aplicativo desktop.
+Dicas orientam investigação. Cartões e alternativas são embaralhados; discuta o texto, não a posição.
+Correção conduzida pelo professor após o exercício. Este pacote não contém gabaritos.
