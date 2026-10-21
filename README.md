@@ -73,7 +73,17 @@ Na A4, leia atividades/A04/guia-ambiente.md e guia-git.md. Copie inicial/, inclu
 
 Implemente a regra em regras.py; app.py e exemplo_excecoes.py estão completos. None/PENDENTE é a lacuna declarada. Compare os cinco casos e registre outros dois. Antes de git init, confirme que a pasta não pertence a outro repositório. Revise conteúdo staged, identidade autorizada e seis arquivos antes do commit local, sem remoto. Entregue projeto, README, evidências e exportação; não envie .venv, .git, caches ou segredos.
 
+## Editar com o Atelier
+
+Nos blocos com editor, altere o arquivo, copie ou baixe seu trabalho e use Reiniciar para voltar ao exemplo inicial. Python não é executado no navegador: baixe o arquivo e execute na IDE ou no terminal; o campo de saída é um registro manual. Markdown é texto editável. Nos exercícios CSS, a prévia isolada permite testar a largura da página didática, não uma interface desktop Python.
+
+Preserve a pasta `assets/` completa ao extrair ou compartilhar o material, junto de `lessons/` e `atividades/`. Sem JavaScript, os enunciados e arquivos iniciais continuam disponíveis, mas os editores não são montados.
+
+## Registrar e entregar
+
 Durante a aula, responda às questões e preencha a seção de registros com nome, turma, data, anotações da prática e reflexão. Antes de fechar ou recarregar a página, clique em **Exportar registros da aula**. Será baixado um arquivo como `registro-a04-2026-10-20.md`, que pode ser lido no VS Code ou em um editor de texto.
+
+A exportação inclui os rascunhos modificados no Atelier e a saída registrada manualmente. Baixar um arquivo do editor salva somente aquele arquivo. Não há salvamento automático entre aberturas; exporte ou baixe antes de recarregar.
 
 Anexe esse arquivo, os modelos preenchidos e os arquivos Python solicitados no canal de entrega indicado pelo professor. A exportação faz o download; o envio é feito por você. Os arquivos produzidos fora da página precisam ser anexados separadamente. Recarregar a página limpa as respostas e anotações da sessão.
 

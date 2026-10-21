@@ -5,6 +5,8 @@ Node.js 18+; servidor sem dependências, sem npm install. Ctrl+C encerra o servi
 P alterna a grade; o botão de apresentação amplia a leitura.
 Página e arquivos locais offline; instalações e fontes externas podem precisar de internet.
 Prática: Python no computador, IDE e PowerShell. Não há execução Python no navegador.
+Atelier: edite, copie, baixe ou reinicie os arquivos na página. A prévia CSS é isolada; a saída Python é registrada manualmente.
+Preserve a pasta assets inteira junto de lessons e atividades. A exportação inclui rascunhos modificados do Atelier, não arquivos externos.
 Recarregar limpa as respostas; exporte antes de fechar. O download não envia nada ao professor.
 A01: 180 minutos, incluindo 15 de pausa. Abra atividades/A01/inicial.
 Execute python primeiro_programa.py, python leitura.py e python diagnostico.py.
