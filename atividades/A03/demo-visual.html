@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A03 — Observação visual da página</title>
+<style>
+:root{color-scheme:light;--blue:#004a8d;--orange:#f7941d;--ink:#172d42;--line:#d7e0e8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:#f5f7fa;color:var(--ink);font:18px/1.6 'Segoe UI',Arial,sans-serif}
+main{max-width:900px;margin:auto;padding:32px 20px}
+h1{font-size:34px;line-height:1.15;color:var(--blue)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+article{min-width:0;padding:20px;border:1px solid var(--line);border-top:4px solid var(--orange);border-radius:12px;background:white}
+pre{max-width:100%;overflow:auto;padding:16px;background:#142b40;color:#f0f6fb;font:15px/1.6 Consolas,monospace}
+.option{display:block;padding:12px;border:1px solid var(--line);margin:8px 0}
+.option:has(input:checked){background:#eaf2fa;border-color:var(--blue)}
+.option:has(input:checked)::after{content:" ✓ Selecionada";font-weight:700}
+input{accent-color:var(--blue)}
+a:focus-visible,button:focus-visible,input:focus-visible,pre:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+@media(max-width:40rem){.cards{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body><main>
+<p>A03 · Observação da página didática</p>
+<h1>Compare aparência e funcionamento</h1>
+<p>Esta é uma demonstração HTML para observar leitura e foco. Não executa Python, não corrige questões e não grava dados. Os cartões da auditoria têm relatos próprios; avalie cada um pelo seu contexto.</p>
+<div class="cards">
+<article><h2>Trecho longo</h2>
+<p>Use Tab para focar o trecho e as teclas de seta para percorrer a linha, quando houver rolagem horizontal. A janela pode ser estreitada sem cortar a parte final.</p>
+<pre tabindex="0" aria-label="Exemplo de linha longa com rolagem horizontal">print("Esta linha de demonstração é propositalmente longa para observar a leitura horizontal e conferir que o trecho completo permanece disponível em uma tela estreita.")</pre>
+</article>
+<article><h2>Estado perceptível</h2>
+<fieldset><legend>Marque uma etapa para observar o estado</legend>
+<label class="option"><input type="radio" name="etapa" value="papel">Planejamento no papel</label>
+<label class="option"><input type="radio" name="etapa" value="codigo">Tradução para código</label>
+</fieldset>
+<p>O controle nativo e o texto acompanham a seleção. Use o teclado e observe o foco. Esta escolha não faz parte do registro exportado da aula.</p>
+</article>
+</div>
+<p><a href="../../lessons/0003-raciocinio-no-papel-pseudocodigo-e-traducao-para-python.html#auditoria">Voltar à auditoria da A03</a></p>
+</main></body></html>

@@ -6,6 +6,8 @@ Aplicativos desktop com Python e integração de banco de dados. Curso de 92 hor
 
 - A01 — Abertura, ambiente e diagnóstico (180 minutos).
 - A02 — Requisitos, ética e organização do trabalho (180 minutos).
+- A03 — Raciocínio no papel, pseudocódigo e tradução para Python (180 minutos).
+- A04 — Ambiente virtual, módulos, exceções e histórico local (180 minutos).
 
 As demais aulas da grade aparecem como planejadas e serão liberadas ao longo do curso.
 
@@ -38,7 +40,7 @@ Abra o terminal na pasta que contém `package.json` e `index.html`.
    ```
 
 2. Abra no navegador o endereço **localhost** mostrado no terminal, normalmente `http://localhost:4321/`. Se a porta estiver ocupada, use a outra porta informada.
-3. No índice, clique na aula indicada pelo professor. Na primeira aula do curso, abra **A1 — Abertura, ambiente e diagnóstico**.
+3. No índice, clique na aula indicada pelo professor, entre as disponíveis neste pacote. Na primeira aula do curso, abra A1 quando ela estiver incluída.
 4. Leia os objetivos e acompanhe os blocos da aula. A tecla **P** mostra ou oculta a grade; **Escape** fecha a grade. O botão de apresentação amplia a leitura.
 5. Mantenha o terminal aberto durante o uso. Para encerrar o servidor, pressione **Ctrl+C**.
 
@@ -56,9 +58,22 @@ python diagnostico.py
 
 Se o computador usa o iniciador `py`, substitua `python` por `py`. O texto `PENDENTE` no diagnóstico é parte da atividade. Nesta aula não é necessário instalar pacotes com pip.
 
-Na A2, leia `atividades/A02/guia-ferramentas.md` e copie os modelos para uma pasta nova da equipe. Preencha briefing, requisitos, backlog e evidências com dados fictícios. A atividade é de análise e organização; siga o guia antes dos comandos Git.
+Na A2, comece pela preparação na abertura da própria página. Na área de atividades indicada pelo professor, crie uc9-a02/docs (ou um nome livre, sem substituir trabalhos). Salve nessa pasta os seis materiais pelos links da abertura ou copie-os de atividades/A02 do pacote extraído. Abra uc9-a02 no VS Code, confira os nomes e salve/reabra o briefing antes de prosseguir.
 
-Durante a aula, responda às questões e preencha a seção de registros com nome, turma, data, anotações da prática e reflexão. Antes de fechar ou recarregar a página, clique em **Exportar registros da aula**. Será baixado um arquivo como `registro-a01-2026-10-19.md`, que pode ser lido no VS Code ou em um editor de texto.
+Preencha briefing.md, requisitos.md, backlog.md e evidencias.md na ordem das quatro atividades, usando o cenário fictício de equipamentos. CSV e guia são consulta. Entregue os quatro documentos e o registro exportado. Não há Python para executar ou biblioteca para instalar. Inspecione Git com o professor; se encontrar repositório existente, pare e avalie sem criar outro dentro dele. Guia detalhado em atividades/A02/guia-ferramentas.md.
+
+Na A3, preencha primeiro atividades/A03/tabela-rastreio.md e pseudocodigo.md. Depois leia guia-execucao.md e abra atividades/A03/inicial/ na IDE. No terminal dessa pasta:
+
+    python rastreio.py
+    python retirada.py
+
+O primeiro arquivo é o exemplo completo de lotes; o segundo tem duas funções para completar. None/PENDENTE são lacunas didáticas; False e zero são resultados possíveis após implementar. Preserve os seis casos independentes. Não é necessário instalar bibliotecas. Entregue tabela, pseudocódigo, evidências, sua retirada.py e o registro exportado.
+
+Na A4, leia atividades/A04/guia-ambiente.md e guia-git.md. Copie inicial/, incluindo .gitignore, para uma pasta nova fora do material e de outros repositórios. Crie .venv e execute seu Python pelo caminho explícito; não é preciso ativar nem instalar bibliotecas externas. Selecione o mesmo interpretador na IDE.
+
+Implemente a regra em regras.py; app.py e exemplo_excecoes.py estão completos. None/PENDENTE é a lacuna declarada. Compare os cinco casos e registre outros dois. Antes de git init, confirme que a pasta não pertence a outro repositório. Revise conteúdo staged, identidade autorizada e seis arquivos antes do commit local, sem remoto. Entregue projeto, README, evidências e exportação; não envie .venv, .git, caches ou segredos.
+
+Durante a aula, responda às questões e preencha a seção de registros com nome, turma, data, anotações da prática e reflexão. Antes de fechar ou recarregar a página, clique em **Exportar registros da aula**. Será baixado um arquivo como `registro-a04-2026-10-20.md`, que pode ser lido no VS Code ou em um editor de texto.
 
 Anexe esse arquivo, os modelos preenchidos e os arquivos Python solicitados no canal de entrega indicado pelo professor. A exportação faz o download; o envio é feito por você. Os arquivos produzidos fora da página precisam ser anexados separadamente. Recarregar a página limpa as respostas e anotações da sessão.
 

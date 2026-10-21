@@ -1,5 +1,5 @@
 UC09 — ALUNO
-92 horas / 31 encontros. Aulas disponíveis neste pacote: A01, A02.
+92 horas / 31 encontros. Aulas disponíveis neste pacote: A01, A02, A03, A04.
 Extraia o ZIP inteiro. Execute npm start nesta pasta ou abra index.html diretamente.
 Node.js 18+; servidor sem dependências, sem npm install. Ctrl+C encerra o servidor.
 P alterna a grade; o botão de apresentação amplia a leitura.
@@ -10,9 +10,17 @@ A01: 180 minutos, incluindo 15 de pausa. Abra atividades/A01/inicial.
 Execute python primeiro_programa.py, python leitura.py e python diagnostico.py.
 Sem pacotes Python externos na A01. PENDENTE no arquivo inicial é uma lacuna intencional.
 Registre em atividades/A01/evidencias.md; entregue o registro exportado e seus arquivos Python.
-A02: 180 minutos, incluindo 15 de pausa. Atividades em atividades/A02/.
-Abra guia-ferramentas.md e preencha briefing.md, requisitos.md, backlog.md e evidencias.md numa pasta nova da equipe. Use dados-sinteticos.csv.
-Trabalhe com IDE/editor e PowerShell; Git local quando disponível. Não há programa Python para implementar ou executar na A02.
-Auditoria de CSS é um bloco complementar de leitura da página; não é a interface do aplicativo desktop.
-Dicas orientam investigação. Cartões e alternativas são embaralhados; discuta o texto, não a posição.
+A02: 180 minutos, incluindo 15 de pausa. Comece pela preparação na abertura da aula.
+Crie uc9-a02/docs em uma área de atividades autorizada, com nome livre para não substituir trabalhos. Salve ou copie os seis materiais dos links ou de atividades/A02 do pacote extraído.
+Abra uc9-a02 no VS Code, confira os nomes e salve/reabra o briefing. Preencha os quatro documentos na ordem das atividades; CSV e guia são consulta.
+Entregue briefing.md, requisitos.md, backlog.md, evidencias.md e a exportação da página. Git é inspecionado com acompanhamento; uma raiz existente exige avaliação antes de inicializar.
+Não há programa Python para executar nem pacote para instalar na A02. Auditoria CSS trata só da página didática. Dicas não são gabarito; cartões e opções são embaralhados.
+A03: 180 minutos, incluindo 15 de pausa. Comece por tabela-rastreio.md e pseudocodigo.md em atividades/A03 antes de executar.
+Leia guia-execucao.md. Na pasta atividades/A03/inicial, rode python rastreio.py e python retirada.py.
+O exemplo de lotes está completo. Em retirada.py, complete as duas funções; None/PENDENTE são lacunas declaradas. False e zero são resultados válidos, diferentes de None.
+Sem bibliotecas externas. casos.csv é consulta; não é carregado pelo programa. Entregue tabela, pseudocódigo, evidências, retirada.py e exportação da página.
+A04: 180 minutos, incluindo 15 de pausa. Leia atividades/A04/guia-ambiente.md e guia-git.md.
+Copie inicial/ (inclusive .gitignore) para uma pasta nova fora do material e de outros repositórios. Crie .venv; use seu Python explícito, sem ativação.
+Não há bibliotecas externas. app.py está completo; regras.py contém uma lacuna None/PENDENTE para implementar.
+Revise os seis arquivos e o conteúdo staged antes do commit local, sem remoto. Entregue código, README, evidências e exportação; não envie .venv/.git/caches/segredos.
 Correção conduzida pelo professor após o exercício. Este pacote não contém gabaritos.

@@ -1,0 +1,2 @@
+# A04 usa somente a biblioteca padrão do Python.
+# Nenhuma dependência externa para instalar neste encontro.

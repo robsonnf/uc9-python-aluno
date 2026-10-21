@@ -1,0 +1,327 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>A03 · Do raciocínio no papel ao código Python</title><style>:root{--blue:#004a8d;--orange:#f7941d;--peach:#fdc180;--ink:#172d42;--muted:#52677a;--paper:#f5f7fa;--line:#d7e0e8;--pale:#eaf2fa}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;font:17px/1.65 'Segoe UI',Arial,sans-serif;color:var(--ink);background:var(--paper)}a{color:var(--blue);text-underline-offset:4px}a:hover{text-decoration-thickness:2px}button,input,textarea{font:inherit}button,summary{cursor:pointer}button{border:1px solid var(--blue);border-radius:8px;padding:10px 17px;color:var(--blue);background:white;font-weight:650}button:hover{background:var(--pale)}button:disabled{opacity:.5;cursor:default}button.primary{background:var(--blue);color:white}button.danger{border-color:#8a3b16;color:#8a3b16}a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--orange);outline-offset:4px}.skip{position:absolute;top:-100px;background:white;padding:10px}.skip:focus{top:0;z-index:30}.top{background:white;border-bottom:1px solid var(--line);padding:14px 5%;display:flex;justify-content:space-between;gap:15px;align-items:center}.wordmark{font-size:20px;font-weight:800;color:var(--blue);letter-spacing:.03em}.wordmark small{display:block;font-size:11px;letter-spacing:.15em;color:var(--muted)}.badge{font-size:12px;font-weight:700;background:var(--peach);padding:5px 12px;border-radius:40px;color:var(--ink)}.hero{background:var(--blue);color:white;padding:55px max(5%,calc((100vw - 1140px)/2)) 42px;position:relative;border-bottom:7px solid var(--orange)}.hero .eyebrow{color:var(--peach)}h1{font-size:clamp(36px,5vw,65px);line-height:1.06;letter-spacing:-.04em;max-width:790px;margin:18px 0 22px}h2{font-size:clamp(26px,3vw,38px);line-height:1.18;letter-spacing:-.025em;margin:8px 0 24px}h3{font-size:20px;line-height:1.3}p{margin:12px 0}.hero p{max-width:790px}.hero .thesis{font-size:21px;line-height:1.5}.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}.meta span{padding:6px 13px;border:1px solid #ffffff60;border-radius:6px;font-size:13px}.rail{position:sticky;top:0;z-index:10;background:white;border-bottom:1px solid var(--line);padding:12px 4%;display:flex;gap:8px;overflow:auto;align-items:center}.rail a{white-space:nowrap;text-decoration:none;padding:5px 10px;font-size:13px;font-weight:650}.rail .status{margin-left:auto;font-size:11px;white-space:nowrap;color:var(--muted)}main{max-width:1140px;margin:auto;padding:25px 24px 60px}section{padding:44px 0;border-bottom:1px solid var(--line)}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.16em;color:var(--blue)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:25px 0}.grid article,.tools details,.exercise,fieldset,.audit-item{background:white;border:1px solid var(--line);border-radius:12px;padding:22px}.grid article{border-top:4px solid var(--orange)}.pipeline{padding-left:28px}.pipeline li{padding:18px;background:white;border:1px solid var(--line);margin:8px 0;border-radius:9px}.pipeline strong{font-size:23px;color:var(--blue)}.step-controls,.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0}.tools{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tools details:last-child{grid-column:1/-1}summary{font-weight:650;color:var(--blue);padding:9px 0}details{margin:12px 0}details p{margin-left:5px}pre{background:#142b40;color:#f0f6fb;padding:24px;overflow:auto;border-radius:10px;font:15px/1.7 Consolas,monospace;tab-size:4}code{font-family:Consolas,monospace}p code{background:#e2eaf2;padding:2px 4px}hr{border:0;border-top:1px solid var(--line);margin:35px 0}.home{font-size:12px;display:inline-block;margin-top:20px}.exercise{margin:20px 0}.exercise pre{margin-bottom:5px}fieldset{min-width:0;margin:22px 0}legend{font-weight:700;padding:0 10px;font-size:18px}.option{display:block;padding:12px;border:1px solid var(--line);border-radius:8px;margin:8px 0}.option:has(input:checked){background:var(--pale);border:2px solid var(--blue);padding:11px}.option input{margin-right:9px;accent-color:var(--blue)}.selected-text{font-size:14px;color:var(--blue);font-weight:700;min-height:25px}.audit-item{margin:16px 0}.audit-item h3{font-size:14px;color:var(--blue);letter-spacing:.04em}.discuss{display:block;margin-top:12px;font-weight:600}.discuss input{accent-color:var(--blue);width:18px;height:18px}.toolbar{position:relative;border-left:5px solid var(--orange);padding:20px;background:#fff3e5;margin:20px 0}.toolbar p{margin:4px 0}textarea{display:block;width:100%;min-height:150px;border:1px solid #748a9e;border-radius:8px;padding:15px;margin:8px 0;resize:vertical}.teacher{background:#fff3e5;border:2px solid var(--orange);padding:20px;border-radius:10px;margin:25px 0}.teacher pre{white-space:pre-wrap}.teacher summary{font-size:18px}footer{background:#e8eef4;padding:35px max(5%,calc((100vw - 1100px)/2));font-size:13px}.schedule{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.schedule span{background:white;border:1px solid var(--line);padding:8px 12px;border-radius:7px;font-size:13px}.source-page{max-width:1000px;margin:auto;padding:25px}.source-page nav{position:static}.notice{border-left:4px solid var(--orange);padding:12px 18px;background:#fff3e5}.js-only{display:none}.js .js-only{display:inline-block}.js .actions.js-only{display:flex}body.present{font-size:21px}body.present main{max-width:1280px}body.present .hero h1{font-size:70px}@media(max-width:650px){.grid,.tools{grid-template-columns:1fr}.tools details:last-child{grid-column:auto}.hero{padding:35px 24px}.top{padding:12px 20px}.rail .status{display:none}main{padding:10px 20px}.hero .thesis{font-size:18px}.grid article,fieldset,.audit-item{padding:16px}h1{font-size:42px}pre{font-size:13px;padding:15px}section{padding:32px 0}body.present .hero h1{font-size:42px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{.rail,.actions,button,.js-only{display:none!important}.hero{background:white;color:var(--ink);padding:15px}section{break-inside:auto}.pipeline li{display:list-item!important}footer{background:white}.teacher{display:none}.hero h1{font-size:32px}}
+:root{--grade-width:300px}.course-sidebar{background:white;border-right:1px solid var(--line);padding:24px;color:var(--ink)}.grade-heading h2{font-size:27px;margin:10px 0}.grade-heading p{font-size:13px;color:var(--muted)}.grade-list{list-style:none;padding:0;margin:25px 0}.grade-item{display:grid;grid-template-columns:36px 1fr;gap:5px;padding:14px 8px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45}.grade-item small{display:block;font-size:11px;color:var(--muted);margin-top:5px}.grade-number{font-weight:800;color:var(--blue)}.grade-item.current{background:var(--pale);border-left:4px solid var(--orange);border-radius:8px}.grade-sections{grid-column:1/-1;padding-left:27px;font-size:12px}.grade-sections li{margin:9px 0}.grade-sections a{text-decoration:none}.grade-sections a:hover{text-decoration:underline}.js .course-sidebar{position:fixed;left:0;top:0;bottom:0;width:var(--grade-width);overflow-y:auto;z-index:25}.course-sidebar[hidden]{display:none}.js body.grade-open{padding-left:var(--grade-width)}.grade-toggle{position:fixed;right:22px;bottom:22px;z-index:26;background:var(--blue);color:white;box-shadow:0 4px 18px #172d4240}.grade-toggle:hover{background:#003564;color:white}.js body.grade-open .hero{padding-left:5%;padding-right:5%}@media(max-width:999px){.js body.grade-open{padding-left:0}.js .course-sidebar{width:min(320px,88vw);box-shadow:8px 0 30px #172d4240}.grade-toggle{right:12px;bottom:12px;font-size:13px}}@media print{.course-sidebar,.grade-toggle{display:none!important}.js body.grade-open{padding-left:0}}
+/* Refluxo do conteúdo sem alterar os arquivos/códigos copiados. */
+.grid,.tools{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid>*,.tools>*,.exercise,.audit-item,details{min-width:0}
+main p,main li,main h1,main h2,main h3,main legend,main label,main summary,main a,main td,main th{overflow-wrap:anywhere}
+.preparation{margin:24px 0;padding:20px;border:1px solid var(--line);border-left:4px solid var(--orange);border-radius:10px;background:white}
+.preparation ol{padding-left:24px}.preparation li+li{margin-top:14px}.preparation-downloads{display:flex;flex-wrap:wrap;gap:10px 16px}.preparation-downloads a{display:inline-block;padding:5px 0}
+@media(max-width:650px){
+ .grid,.tools{grid-template-columns:minmax(0,1fr)}
+ main pre{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%;word-break:normal}
+ main pre code{white-space:inherit}
+ .rail{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:12px 16px;overflow:visible;align-items:stretch}
+ .rail a{white-space:normal;overflow-wrap:anywhere;padding:8px;font-size:13px;border:1px solid var(--line);border-radius:6px}
+ .rail .status{display:none}.preparation{padding:16px}
+ body.present .hero h1{font-size:clamp(32px,10vw,42px)}
+ .js .grade-toggle{position:static;display:block;max-width:calc(100% - 32px);margin:12px 16px 12px auto;box-shadow:none}
+ main{padding-bottom:36px}footer{padding-bottom:36px}
+}
+#registro input[type=text],#registro input[type=date]{display:block;width:100%;min-width:0;margin-top:8px;padding:10px 12px;border:1px solid #748a9e;border-radius:8px;background:white;color:#172d42}#registro .grid>label{min-width:0}.table-scroll{max-width:100%;overflow-x:auto;margin:22px 0}.table-scroll table{border-collapse:collapse;width:100%;background:white}.table-scroll th,.table-scroll td{padding:12px 16px;text-align:left;border:1px solid var(--line)}.table-scroll th{background:var(--pale);color:var(--blue)}.table-scroll caption{text-align:left;font-weight:700;margin-bottom:10px}.table-scroll:focus-visible{outline:3px solid var(--blue);outline-offset:3px}</style></head><body data-lesson="A03">
+<a class="skip" href="#conteudo">Pular para conteúdo</a><aside id="course-sidebar" class="course-sidebar" aria-label="Grade da UC9"><div class="grade-heading"><div class="eyebrow">UC9 · PYTHON</div><h2>Grade das aulas</h2><p>31 encontros · 92 h</p><p>Somente aulas disponíveis possuem acesso.</p><button class="js-only" id="grade-close" type="button">Ocultar grade · P</button></div><ol class="grade-list"><li class="grade-item available"><span class="grade-number">A01</span><a href="0001-abertura-e-diagnostico.html"><span >Abertura, ambiente e diagnóstico<small>Disponível</small></span></a></li><li class="grade-item available"><span class="grade-number">A02</span><a href="0002-requisitos-etica-e-organizacao-do-trabalho.html"><span >Requisitos, ética e organização do trabalho<small>Disponível</small></span></a></li><li class="grade-item current"><span class="grade-number">A03</span><span aria-current=page>Raciocínio no papel, pseudocódigo e tradução para Python<small>Nesta aula</small></span><ol class="grade-sections"><li><a href="#partida">O que precisa acontecer antes de escrever código?</a></li><li><a href="#esteira">Da regra à evidência em cinco passos</a></li><li><a href="#rastro">Faça outra pessoa seguir seus passos</a></li><li><a href="#traducao">Qual linha corresponde a qual passo?</a></li><li><a href="#desafio">Traduza sua regra em duas funções</a></li><li><a href="#auditoria">A hipótese resiste a outro caso?</a></li><li><a href="#registro">Mostre o raciocínio que sustenta seu código</a></li></ol></li><li class="grade-item available"><span class="grade-number">A04</span><a href="0004-ambiente-virtual-modulos-excecoes-e-historico-local.html"><span >Ambiente virtual, módulos, exceções e histórico local<small>Disponível</small></span></a></li><li class="grade-item planned"><span class="grade-number">A05</span><span >POO básica: classes, objetos e composição<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A06</span><span >Modelagem relacional e SQL essencial<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A07</span><span >Conexão Python–banco e ciclo da conexão<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A08</span><span >Inserção e consulta parametrizadas<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A09</span><span >Atualização e remoção por identificador<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A10</span><span >Transações, integridade e persistência<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A11</span><span >Interface desktop: janela, organização e widgets<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A12</span><span >Eventos, callbacks e validação de entradas<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A13</span><span >Cadastro e listagem integrados ao banco<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A14</span><span >Edição, exclusão e sincronização da interface<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A15</span><span >Sprint CRUD, testes de fluxo e devolutiva<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A16</span><span >Filtros, ordenação e consulta vazia<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A17</span><span >JOIN, agregações e listagens estruturadas<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A18</span><span >Arquivos, caminhos, codificação e CSV<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A19</span><span >Carga massiva, inconsistências e transações em lote<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A20</span><span >MVC aplicado à refatoração do aplicativo<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A21</span><span >Repository/DAO, serviços e responsabilidades<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A22</span><span >Consolidação arquitetural e testes de regressão<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A23</span><span >ORM: ambiente, mapeamento, sessão e transação<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A24</span><span >ORM: relacionamentos, CRUD e consultas<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A25</span><span >SQL direto × ORM e decisão documentada<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A26</span><span >Depuração sistemática, testes e recuperação de falhas<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A27</span><span >Documentação e reprodução do ambiente<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A28</span><span >Executável, recursos e banco gravável<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A29</span><span >Teste cruzado no destino e distribuição<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A30</span><span >Ajustes finais e preparação da defesa<small>Planejada</small></span></li><li class="grade-item planned"><span class="grade-number">A31</span><span >Defesa, entrega final, retrospectiva e manutenção<small>Planejada</small></span></li></ol></aside><button id="grade-toggle" class="grade-toggle js-only" type="button" aria-controls="course-sidebar" aria-expanded="true" aria-keyshortcuts="P">Grade das aulas · P</button><header class="top"><div class="wordmark">UC9 <small>DESENVOLVIMENTO DESKTOP · PYTHON</small></div><span class="badge" data-idoc="status">Aula 03</span></header>
+<div class="hero"><div class="eyebrow">A03 · Raciocínio no papel, pseudocódigo e tradução para Python</div><h1>Do raciocínio no papel ao código Python</h1><p class="thesis">Registre o que espera antes de executar; use a diferença para investigar sua regra.</p><p data-idoc="caveat">Hoje simulamos uma regra em memória com dados fictícios. O pseudocódigo orienta o raciocínio; Python é executado na IDE ou no terminal. Não há banco, interface gráfica ou nota automática nesta página.</p><div class="meta"><span>03 / 31 encontros</span><span>180 minutos · inclui 15 de pausa</span><span>Aluno · aprender fazendo</span></div></div>
+<nav class="rail" aria-label="Navegação da aula"><a href="#partida">01 O que precisa acontecer antes de escrever código</a><a href="#esteira">02 Da regra à evidência em cinco passos</a><a href="#rastro">03 Faça outra pessoa seguir seus passos</a><a href="#traducao">04 Qual linha corresponde a qual passo</a><a href="#desafio">05 Traduza sua regra em duas funções</a><a href="#auditoria">06 A hipótese resiste a outro caso</a><a href="#registro">07 Mostre o raciocínio que sustenta seu código</a><span class="status">A03 · PYTHON</span></nav>
+<main id="conteudo"><p class="notice">A contagem curricular dos intervalos depende da instituição. Conteúdo-base de <time data-idoc="asof">2026-10-20</time>. Use dados sintéticos.</p><div class="actions js-only"><button id="presentation" aria-pressed="false">Ampliar para apresentação</button><button data-export class="primary">Exportar registros da aula</button><a href="#registro">Preencher identificação e registros</a></div><div class="schedule"><span>Retomada <strong>15 min</strong></span><span>Demonstração <strong>25 min</strong></span><span>Prática guiada <strong>35 min</strong></span><span>Intervalo <strong>15 min</strong></span><span>Discussão técnica <strong>20 min</strong></span><span>Prática e revisão <strong>55 min</strong></span><span>Evidências e fechamento <strong>15 min</strong></span></div><section data-stop="partida" id="partida"><div class="eyebrow">Retomar e delimitar</div><h2>O que precisa acontecer antes de escrever código?</h2><aside class="notice environment-guide" aria-label="Onde realizar esta etapa"><strong>Onde no ambiente:</strong> Papel/caderno e documentos da A02 no editor; página da aula ao lado.<p><strong>Ação:</strong> Retomar uma regra e identificar entradas, decisão e resultado.</p><p><strong>O que observar:</strong> Se a regra permite prever o resultado sem inventar informações.</p></aside><p>Na A02 você escreveu requisitos e critérios. Agora uma dupla precisa transformar uma regra em passos que outra pessoa consegue seguir e comparar com Python.</p><div class="grid"><article><h3>Objetivos</h3><ul><li>Separar entrada, processamento e saída.</li><li>Rastrear condições e caminhos no papel.</li><li>Traduzir passos em funções, condições e retornos.</li><li>Comparar previsão e execução em casos válidos, inválidos e de fronteira.</li></ul></article><article><h3>Contrato da simulação</h3><p>Recebemos <strong>disponível inteiro não negativo</strong> e <strong>solicitada inteira</strong>. Aceitar retirada somente positiva e que não exceda o disponível. Aceitação desconta a quantidade; recusa preserva o saldo.</p><p>Esses números já estão preparados no código. Não há entrada de texto, validação de outros tipos ou gravação persistente nesta aula.</p></article></div><p><strong>Regra didática:</strong> o domínio de equipamentos retoma A1/A2; sua adoção como aplicativo definitivo depende do acordo da turma. Os indicadores mobilizados hoje são código e documentação; integração e executável entram depois.</p><p><strong>Pré-requisitos:</strong> localizar e executar arquivos como na A01; reconhecer valores, comparações e funções. Se precisar de apoio, comece por um caso no papel e acompanhe a execução em dupla.</p><a class="home" data-idoc="home" href="fonte-0003-raciocinio-no-papel-pseudocodigo-e-traducao-para-python.html#partida">Conferir conteúdo-base desta seção ↗</a></section><section data-stop="esteira" id="esteira"><div class="eyebrow">Esteira de desenvolvimento</div><h2>Da regra à evidência em cinco passos</h2><aside class="notice environment-guide" aria-label="Onde realizar esta etapa"><strong>Onde no ambiente:</strong> Página → etapas; papel e modelo pseudocodigo.md.<p><strong>Ação:</strong> Percorrer a sequência e ligar cada etapa a um arquivo ou registro.</p><p><strong>O que observar:</strong> Se a previsão foi feita antes da execução e se a evidência permite repetir o caso.</p></aside><p>Investigar fica mais fácil quando você sabe qual etapa gerou a diferença. As etapas permitem voltar e corrigir o raciocínio.</p><ol class="pipeline"><li><strong>Entender</strong><p>Fixar a regra, o contrato das entradas e o que observar na saída.</p></li><li><strong>Representar</strong><p>Fazer tabela no papel e pseudocódigo com caminhos explícitos.</p></li><li><strong>Traduzir</strong><p>Relacionar cada passo a atribuição, comparação, condição e retorno Python.</p></li><li><strong>Executar e comparar</strong><p>Salvar, executar na IDE/CLI e confrontar o resultado com a previsão.</p></li><li><strong>Revisar e registrar</strong><p>Explicar uma divergência, repetir os casos e documentar a correção.</p></li></ol><p><strong>Pergunta central:</strong> se duas pessoas seguem os mesmos passos e entradas, conseguem justificar o mesmo resultado? Um teste que passa é uma evidência desse caso, não uma prova de correção para todas as entradas.</p><a class="home" data-idoc="home" href="fonte-0003-raciocinio-no-papel-pseudocodigo-e-traducao-para-python.html#esteira">Conferir conteúdo-base desta seção ↗</a></section><section data-stop="rastro" id="rastro"><div class="eyebrow">Atividade 1 · Papel primeiro</div><h2>Faça outra pessoa seguir seus passos</h2><aside class="notice environment-guide" aria-label="Onde realizar esta etapa"><strong>Onde no ambiente:</strong> Papel/caderno; tabela-rastreio.md e pseudocodigo.md no VS Code.<p><strong>Ação:</strong> Registrar os seis casos e descrever os caminhos antes de executar.</p><p><strong>O que observar:</strong> Estado inicial de cada linha, decisão e saldo previsto, sem apagar a previsão.</p></aside><p><strong>Objetivo:</strong> decompor a retirada e tornar o plano repetível. Baixe <a download href="../atividades/A03/tabela-rastreio.md" data-download-content="# A03 — Tabela de execução no papel
+
+Nome: ____________________ Turma: __________ Data: __________
+
+## Atividade 1 — Planejar a retirada
+
+Contrato do exercício: disponível é inteiro não negativo; solicitada é inteiro. Os valores já estão preparados no programa; não é preciso pedir input ao usuário.
+
+Retirada permitida: quantidade solicitada positiva e que não excede o disponível. Aceitação desconta a quantidade; recusa preserva o saldo. A simulação não grava banco nem altera inventário real.
+
+Antes de executar, preencha todas as colunas:
+
+| Caso | Disponível inicial | Solicitada | Condição da sua regra | Permitida? | Saldo previsto | Saldo observado | Diferença / investigação |
+|---|---:|---:|---|---|---|---|---|
+| C01 | 3 | 2 | | | | | |
+| C02 | 3 | 4 | | | | | |
+| C03 | 3 | 3 | | | | | |
+| C04 | 3 | 0 | | | | | |
+| C05 | 0 | 1 | | | | | |
+| C06 | 3 | -1 | | | | | |
+
+Cada linha recomeça do disponível indicado. Não transporte o saldo da linha anterior.
+
+## Atividade 2 — Rastrear o exemplo dos lotes
+
+Leia inicial/rastreio.py antes de executar. Atribuição associa um valor ao nome; comparação produz um resultado lógico; return encerra a chamada e entrega um valor.
+
+| Entrada | Resultado da comparação | Bloco percorrido | Retorno previsto | Saída observada | Explicação |
+|---:|---|---|---|---|---|
+| 0 | | | | | |
+| 4 | | | | | |
+| 6 | | | | | |
+
+Após registrar a previsão, execute python rastreio.py e compare. Preserve o registro anterior: corrigir a previsão não significa apagar a evidência do raciocínio.
+">a tabela de rastreio</a>, <a download href="../atividades/A03/pseudocodigo.md" data-download-content="# A03 — Planejamento antes da tradução
+
+Nome: ____________________ Turma: __________ Data: __________
+
+## Convenção de escrita
+
+Use nomes em português, entrada, saída, SE/SENÃO e DEVOLVER; indique blocos por recuo. É uma convenção didática, sem sintaxe universal e sem execução direta pelo Python. Não salve essas instruções em um arquivo .py esperando executá-las.
+
+## Atividade 1 — Contrato e decomposição
+
+- Entradas e tipos:
+- Regra em uma frase:
+- Resultado quando aceita:
+- Resultado quando recusa:
+- Como cada caso recomeça:
+- Uma dúvida ainda não resolvida:
+
+## Função de decisão — pode_retirar
+
+Escreva os passos da decisão e o valor lógico devolvido. Use sua própria redação antes de escrever a condição Python.
+
+    INÍCIO
+        ENTRADAS: ...
+        PASSOS E DECISÕES: ...
+        SAÍDA: ...
+    FIM
+
+## Função de saldo — saldo_apos_retirada
+
+Registre o cálculo e a ação em caso de recusa. Mostre onde termina cada caminho.
+
+    INÍCIO
+        ENTRADAS: ...
+        PASSOS E DECISÕES: ...
+        SAÍDA: ...
+    FIM
+
+## Atividade 4 — Revisão por pares
+
+Outro colega conseguiu repetir seus passos no papel?
+
+- Ambiguidade encontrada:
+- Caso usado para mostrar a diferença:
+- Texto antes:
+- Texto depois:
+- Justificativa:
+- Autor e revisor por papel, sem dados de clientes:
+
+Extensão opcional: descreva a diferença entre executar dois casos independentes e encadear duas retiradas sobre um mesmo saldo. Indique explicitamente quando o estado é atualizado. O desafio obrigatório usa somente casos independentes.
+">o modelo de pseudocódigo</a> e <a download href="../atividades/A03/casos.csv" data-download-content="caso,disponivel,solicitada
+C01,3,2
+C02,3,4
+C03,3,3
+C04,3,0
+C05,0,1
+C06,3,-1
+">os casos fictícios</a>. O CSV é material de consulta; não vamos importar CSV no programa nesta aula.</p><ol><li>Escreva as entradas e os tipos; separe a pergunta “pode retirar?” do cálculo do saldo.</li><li>Preveja cada linha de C01 a C06 sem executar Python. Cada caso recomeça do disponível indicado, mesmo que a linha anterior tenha sido aceita.</li><li>Descreva os caminhos de aceitação e recusa em português com recuo e DEVOLVER.</li><li>Troque o papel com o revisor: ele segue seus passos literalmente e marca uma ambiguidade.</li></ol><div class="table-scroll" tabindex="0" aria-label="Entradas dos casos independentes"><table><caption>Entradas preparadas; preencha os resultados no seu registro</caption><thead><tr><th>Caso</th><th>Disponível</th><th>Solicitada</th></tr></thead><tbody><tr><td>C01</td><td>3</td><td>2</td></tr><tr><td>C02</td><td>3</td><td>4</td></tr><tr><td>C03</td><td>3</td><td>3</td></tr><tr><td>C04</td><td>3</td><td>0</td></tr><tr><td>C05</td><td>0</td><td>1</td></tr><tr><td>C06</td><td>3</td><td>-1</td></tr></tbody></table></div><details><summary>Dica para raciocinar</summary><p>Marque o que já existe no começo da linha e o que só poderá ser calculado depois de decidir. Onde cada caminho termina? Seu colega precisou adivinhar algum passo?</p></details><p><strong>Concluído quando:</strong> há previsão para os seis casos, passos legíveis e uma observação do revisor. A correção será discutida com o professor depois da tentativa.</p><a class="home" data-idoc="home" href="fonte-0003-raciocinio-no-papel-pseudocodigo-e-traducao-para-python.html#rastro">Conferir conteúdo-base desta seção ↗</a></section><section data-stop="traducao" id="traducao"><div class="eyebrow">Atividade 2 · Ler e traduzir</div><h2>Qual linha corresponde a qual passo?</h2><aside class="notice environment-guide" aria-label="Onde realizar esta etapa"><strong>Onde no ambiente:</strong> VS Code → inicial/rastreio.py; terminal PowerShell dessa pasta; tabela em papel.<p><strong>Ação:</strong> Ler o programa, prever 0/4/6, executar python rastreio.py e comparar.</p><p><strong>O que observar:</strong> Comparação, bloco percorrido, valor retornado e impressão no programa principal.</p></aside><p>O exemplo usa <strong>lotes fictícios</strong>: quantidade maior ou igual a 4 recebe o rótulo “lote grande”; as demais quantidades não negativas recebem “lote pequeno”. Ele demonstra tradução, mas não implementa o desafio de retirada.</p><div class="grid"><article><h3>Pseudocódigo de exemplo</h3><pre><code>FUNÇÃO rotular_lote(quantidade)
+    SE quantidade maior ou igual a 4
+        DEVOLVER "lote grande"
+    SENÃO
+        DEVOLVER "lote pequeno"
+FIM</code></pre><p>É uma convenção didática em português, sem sintaxe universal. Esse texto não é um arquivo Python executável.</p></article><article><h3>Tradução: o que observar</h3><ul><li><code>=</code> faz atribuição; <code>==</code> compara igualdade.</li><li><code>&gt;=</code> inclui a igualdade.</li><li>Dois-pontos e indentação definem os blocos Python; use o recuo consistente do exemplo.</li><li><code>return</code> encerra a chamada e entrega o valor. <code>print</code> escreve uma saída; não substitui o retorno esperado.</li></ul></article></div><details><summary>Exemplo público acompanhado · entrada 2</summary><p>2 é comparado com 4; a condição não é satisfeita. O retorno seguinte entrega “lote pequeno” à chamada; a impressão ocorre no programa principal. O exemplo a seguir pode dispensar else porque o primeiro return já encerra o caminho em que a condição é verdadeira.</p></details><p><strong>Sua tarefa:</strong> leia o arquivo abaixo, registre no papel o caminho e o retorno para 0, 4 e 6; só depois execute <code>python rastreio.py</code>. O laço percorre esses três casos. Preserve sua previsão, acrescente a saída observada e explique uma coincidência ou diferença.</p><details><summary>Dica para raciocinar</summary><p>Marque cada linha que a chamada realmente percorre. Depois de devolver um valor, essa mesma chamada ainda segue para o próximo retorno?</p></details><p><strong>Concluído quando:</strong> a tabela separa entrada, condição, caminho e retorno; você diferencia o valor devolvido da linha impressa.</p><div class="exercise"><h3>Arquivo de trabalho · rastreio.py</h3><pre><code id="code-traducao">&quot;&quot;&quot;Demonstração pública A03: prever no papel antes de executar.&quot;&quot;&quot;
+
+
+def rotular_lote(quantidade):
+    if quantidade &gt;= 4:
+        return &quot;lote grande&quot;
+    return &quot;lote pequeno&quot;
+
+
+if __name__ == &quot;__main__&quot;:
+    for quantidade in [0, 4, 6]:
+        rotulo = rotular_lote(quantidade)
+        print(quantidade, &quot;=&gt;&quot;, rotulo)
+</code></pre><div class="actions"><a download href="../atividades/A03/inicial/rastreio.py" data-download-content="&quot;&quot;&quot;Demonstração pública A03: prever no papel antes de executar.&quot;&quot;&quot;
+
+
+def rotular_lote(quantidade):
+    if quantidade &gt;= 4:
+        return &quot;lote grande&quot;
+    return &quot;lote pequeno&quot;
+
+
+if __name__ == &quot;__main__&quot;:
+    for quantidade in [0, 4, 6]:
+        rotulo = rotular_lote(quantidade)
+        print(quantidade, &quot;=&gt;&quot;, rotulo)
+">Baixar arquivo Python</a><button class="js-only" data-copy="code-traducao">Copiar código</button><span aria-live="polite"></span></div></div><a class="home" data-idoc="home" href="fonte-0003-raciocinio-no-papel-pseudocodigo-e-traducao-para-python.html#traducao">Conferir conteúdo-base desta seção ↗</a></section><section data-stop="desafio" id="desafio"><div class="eyebrow">Atividade 3 · Implementar e conferir</div><h2>Traduza sua regra em duas funções</h2><aside class="notice environment-guide" aria-label="Onde realizar esta etapa"><strong>Onde no ambiente:</strong> Pasta atividades/A03/inicial aberta na IDE; terminal integrado PowerShell.<p><strong>Ação:</strong> Completar retirada.py, salvar, executar e confrontar os seis casos com a previsão.</p><p><strong>O que observar:</strong> Tipos de retorno, saldo em caso de recusa e ponto da primeira divergência.</p></aside><p>Leia <a download href="../atividades/A03/guia-execucao.md" data-download-content="# A03 — Da mesa para a IDE e o terminal
+
+## Preparação
+
+Use papel/caderno, a pasta extraída do material, Python 3 e VS Code com Python conforme A01. Não instale pacotes pip; não crie banco nem interface gráfica nesta aula.
+
+1. Abra atividades/A03 no editor para ler os modelos e copiar os arquivos para sua pasta de trabalho.
+2. Faça a tabela e o pseudocódigo antes de executar. casos.csv serve para leitura dos valores; o programa inicial já contém os mesmos casos e não importa CSV.
+3. Abra inicial no VS Code por Arquivo → Abrir Pasta. No terminal integrado PowerShell, confira a pasta e os arquivos:
+
+       Get-Location
+       Get-ChildItem
+       python --version
+
+4. Execute um comando por vez, nessa pasta:
+
+       python rastreio.py
+       python retirada.py
+
+Se a estação usa o iniciador py, troque python por py. O exemplo rastreio.py está completo; retirada.py tem duas funções com lacunas declaradas. No inicial, PENDENTE não significa instalação com defeito.
+
+## Implementação
+
+Complete somente pode_retirar e saldo_apos_retirada. Preserve os parâmetros e os seis casos. Use return para entregar valores às chamadas; o código principal faz a impressão. Salve o arquivo, execute e compare com a previsão de cada caso. False e saldo zero são resultados possíveis, diferentes de None.
+
+Se houver SyntaxError ou IndentationError, confira dois-pontos, recuo e a linha indicada. Erro lógico pode ocorrer sem exceção: compare a regra com o caminho percorrido no caso que divergiu. Não apague a previsão antiga.
+
+## Contrato
+
+Disponível é inteiro não negativo; solicitada é inteiro. Aceitar somente quantidade positiva que não ultrapasse o disponível. Recusa preserva o saldo. Não há conversão de texto nem tratamento de tipos fora desse contrato; esse conteúdo será ampliado na A04. A implementação trabalha em memória, sem gravação persistente.
+
+## Fechamento
+
+Troque explicações com o revisor, registre uma correção e exporte a página antes de recarregar. Entregue os documentos e o código no canal indicado. Primeiro commit revisado, ambiente virtual, módulos e exceções entram na A04; não execute configuração global ou envio remoto nesta atividade.
+">o guia de execução</a>. No terminal da pasta inicial, confirme <code>Get-Location</code> e <code>Get-ChildItem</code>; execute <code>python --version</code>. Use <code>py</code> no lugar de python somente se for o iniciador da estação.</p><p><strong>Objetivo:</strong> completar somente <code>pode_retirar(disponivel, solicitada)</code> e <code>saldo_apos_retirada(disponivel, solicitada)</code>. Preserve parâmetros e casos do arquivo.</p><ul><li>A primeira função devolve True ou False conforme o contrato.</li><li>A segunda devolve saldo inteiro: desconta a quantidade se aceita, preserva o disponível se recusa.</li><li>Os dados são inteiros e o disponível é não negativo; não acrescentar input, banco ou conversões de tipos nesta tarefa.</li><li>As chamadas usam casos independentes; nenhum saldo é transportado à linha seguinte.</li></ul><p><strong>Execução:</strong> salve e rode <code>python retirada.py</code>. O inicial usa None e imprime PENDENTE de propósito. Depois de implementar, False e saldo zero são resultados válidos; não são sinônimos de “não implementado”. Não é preciso instalar dependências.</p><details><summary>Dica para raciocinar</summary><p>Leia sua regra em voz alta: quantas condições precisam ser atendidas ao mesmo tempo? Qual caminho precisa preservar o estado? Compare o primeiro caso que divergiu, em vez de trocar operadores ao acaso.</p></details><p><strong>Concluído quando:</strong> os seis casos coincidem com a regra e você explica os dois caminhos. Registre a tentativa e uma dúvida específica se ainda houver divergência. Não declare validação de texto ou de outros tipos fora do contrato.</p><div class="exercise"><h3>Arquivo de trabalho · retirada.py</h3><pre><code id="code-desafio">&quot;&quot;&quot;A03: complete as duas funções após escrever seu pseudocódigo.
+
+Contrato: disponível é inteiro não negativo; solicitada é inteiro.
+None é uma lacuna didática e produz PENDENTE, não a resposta final.
+Cada linha usa um caso independente; não edite os casos fornecidos.
+&quot;&quot;&quot;
+
+
+def pode_retirar(disponivel, solicitada):
+    # TODO: devolver True ou False conforme a regra do enunciado.
+    return None
+
+
+def saldo_apos_retirada(disponivel, solicitada):
+    # TODO: devolver o saldo inteiro, preservando-o se houver recusa.
+    return None
+
+
+if __name__ == &quot;__main__&quot;:
+    casos = [(3, 2), (3, 4), (3, 3), (3, 0), (0, 1), (3, -1)]
+    for disponivel, solicitada in casos:
+        permitida = pode_retirar(disponivel, solicitada)
+        saldo = saldo_apos_retirada(disponivel, solicitada)
+        print(
+            &quot;Disponivel:&quot;, disponivel,
+            &quot;| Solicitada:&quot;, solicitada,
+            &quot;| Permitida:&quot;, &quot;PENDENTE&quot; if permitida is None else permitida,
+            &quot;| Saldo:&quot;, &quot;PENDENTE&quot; if saldo is None else saldo,
+        )
+</code></pre><div class="actions"><a download href="../atividades/A03/inicial/retirada.py" data-download-content="&quot;&quot;&quot;A03: complete as duas funções após escrever seu pseudocódigo.
+
+Contrato: disponível é inteiro não negativo; solicitada é inteiro.
+None é uma lacuna didática e produz PENDENTE, não a resposta final.
+Cada linha usa um caso independente; não edite os casos fornecidos.
+&quot;&quot;&quot;
+
+
+def pode_retirar(disponivel, solicitada):
+    # TODO: devolver True ou False conforme a regra do enunciado.
+    return None
+
+
+def saldo_apos_retirada(disponivel, solicitada):
+    # TODO: devolver o saldo inteiro, preservando-o se houver recusa.
+    return None
+
+
+if __name__ == &quot;__main__&quot;:
+    casos = [(3, 2), (3, 4), (3, 3), (3, 0), (0, 1), (3, -1)]
+    for disponivel, solicitada in casos:
+        permitida = pode_retirar(disponivel, solicitada)
+        saldo = saldo_apos_retirada(disponivel, solicitada)
+        print(
+            &quot;Disponivel:&quot;, disponivel,
+            &quot;| Solicitada:&quot;, solicitada,
+            &quot;| Permitida:&quot;, &quot;PENDENTE&quot; if permitida is None else permitida,
+            &quot;| Saldo:&quot;, &quot;PENDENTE&quot; if saldo is None else saldo,
+        )
+">Baixar arquivo Python</a><button class="js-only" data-copy="code-desafio">Copiar código</button><span aria-live="polite"></span></div></div><a class="home" data-idoc="home" href="fonte-0003-raciocinio-no-papel-pseudocodigo-e-traducao-para-python.html#desafio">Conferir conteúdo-base desta seção ↗</a></section><section data-stop="auditoria" id="auditoria"><div class="eyebrow">Auditoria · Evidência antes da conclusão</div><h2>A hipótese resiste a outro caso?</h2><aside class="notice environment-guide" aria-label="Onde realizar esta etapa"><strong>Onde no ambiente:</strong> Esta página → cartões; IDE para relatos Python; navegador/DevTools para o bloco visual acompanhado.<p><strong>Ação:</strong> Classificar pelo relato, comparar a evidência e justificar antes da correção.</p><p><strong>O que observar:</strong> Diferença entre lacuna declarada, falha real e adaptação legítima.</p></aside><p>Responda às três perguntas e avalie as dez situações. Há problemas e situações adequadas que podem parecer suspeitas. Cartões e alternativas mudam de posição a cada abertura; uma ordem pode se repetir por acaso. Use o texto da alternativa, nunca “a primeira” ou “a segunda”.</p><p><strong>Azul e ✓ indicam somente “Resposta registrada”, não acerto.</strong> Você pode alterar a escolha, marcar dúvidas e exportar. A correção será apresentada após o fim do exercício, com o professor; não há nota automática.</p><details><summary>Como observar o pequeno bloco CSS</summary><p>CSS organiza a página da aula, não o aplicativo Python. Nos quatro relatos visuais, julgue se o trecho completo continua acessível, se o foco pode ser localizado e se reduzir movimento mantém a operação. Um recorte isolado não prova conformidade de toda a interface. O relato descreve o comportamento a avaliar.</p><p>Explore <a href="../atividades/A03/demo-visual.html" target="_blank" rel="noopener">a demonstração de observação visual</a>, identificada como HTML e sem execução Python. Use Tab, observe uma seleção e estreite a janela.</p></details><fieldset data-question="uc9-a03-q01"><legend>Qual registro permite rastrear uma execução no papel?</legend><div class="question-options"><label class="option"><input type="radio" name="uc9-a03-q01" value="Somente a última linha impressa." autocomplete="off">Somente a última linha impressa.</label><label class="option"><input type="radio" name="uc9-a03-q01" value="Uma captura da IDE sem os dados de entrada." autocomplete="off">Uma captura da IDE sem os dados de entrada.</label><label class="option"><input type="radio" name="uc9-a03-q01" value="Entradas, condição, caminho percorrido e valores por etapa." autocomplete="off">Entradas, condição, caminho percorrido e valores por etapa.</label></div><p class="selected-text" aria-live="polite"></p><details class="reasoning-hint"><summary>Dica para raciocinar</summary><p>Qual registro permitiria a outra pessoa reconstruir a decisão, e não apenas observar seu resultado final?</p></details></fieldset><fieldset data-question="uc9-a03-q02"><legend>Como usar o pseudocódigo em português desta aula?</legend><div class="question-options"><label class="option"><input type="radio" name="uc9-a03-q02" value="Como uma convenção de passos que precisa ser traduzida para Python." autocomplete="off">Como uma convenção de passos que precisa ser traduzida para Python.</label><label class="option"><input type="radio" name="uc9-a03-q02" value="Como arquivo Python pronto, bastando trocar a extensão." autocomplete="off">Como arquivo Python pronto, bastando trocar a extensão.</label><label class="option"><input type="radio" name="uc9-a03-q02" value="Como prova de que todos os testes já passaram." autocomplete="off">Como prova de que todos os testes já passaram.</label></div><p class="selected-text" aria-live="polite"></p><details class="reasoning-hint"><summary>Dica para raciocinar</summary><p>Compare o texto em português com o arquivo executado. Qual deles o interpretador da estação consegue ler diretamente?</p></details></fieldset><fieldset data-question="uc9-a03-q03"><legend>Uma chamada precisa entregar um valor para o código que a chamou. Qual distinção está correta?</legend><div class="question-options"><label class="option"><input type="radio" name="uc9-a03-q03" value="print e return sempre têm o mesmo efeito." autocomplete="off">print e return sempre têm o mesmo efeito.</label><label class="option"><input type="radio" name="uc9-a03-q03" value="return entrega o valor e encerra a chamada; print escreve uma saída." autocomplete="off">return entrega o valor e encerra a chamada; print escreve uma saída.</label><label class="option"><input type="radio" name="uc9-a03-q03" value="return somente muda a cor do terminal." autocomplete="off">return somente muda a cor do terminal.</label></div><p class="selected-text" aria-live="polite"></p><details class="reasoning-hint"><summary>Dica para raciocinar</summary><p>Observe separadamente o que aparece no terminal e o valor recebido pela variável que guarda a chamada.</p></details></fieldset><h3>Situações para investigar</h3><div id="audit-list"><article class="audit-item" id="uc9-a03-au01"><fieldset data-question="uc9-a03-au01"><legend>Python: a regra dos lotes diz “10 ou mais”. O código usa &gt; 10 e, para entrada 10, escolhe o caminho dos lotes menores.</legend><pre><code>if quantidade &gt; 10:
+    rotulo = &quot;maior&quot;
+else:
+    rotulo = &quot;menor&quot;</code></pre><div class="question-options"><label class="option"><input type="radio" name="uc9-a03-au01" value="É problema" autocomplete="off">É problema</label><label class="option"><input type="radio" name="uc9-a03-au01" value="Não é problema" autocomplete="off">Não é problema</label></div><p class="selected-text" aria-live="polite"></p><details class="reasoning-hint"><summary>Dica para raciocinar</summary><p>Compare a frase do contrato com o comportamento exatamente na fronteira, sem olhar só casos muito maiores.</p></details></fieldset><label class="discuss"><input class="discussion" type="checkbox" value="uc9-a03-au01" autocomplete="off"> Marcar para discussão</label></article><article class="audit-item" id="uc9-a03-au02"><fieldset data-question="uc9-a03-au02"><legend>Rastreio: a tabela declara casos independentes, mas a segunda linha usa o saldo final da primeira no lugar do disponível informado para ela.</legend><div class="question-options"><label class="option"><input type="radio" name="uc9-a03-au02" value="É problema" autocomplete="off">É problema</label><label class="option"><input type="radio" name="uc9-a03-au02" value="Não é problema" autocomplete="off">Não é problema</label></div><p class="selected-text" aria-live="polite"></p><details class="reasoning-hint"><summary>Dica para raciocinar</summary><p>Anote de onde veio cada valor usado no começo da linha; ele pertence ao cenário declarado?</p></details></fieldset><label class="discuss"><input class="discussion" type="checkbox" value="uc9-a03-au02" autocomplete="off"> Marcar para discussão</label></article><article class="audit-item" id="uc9-a03-au03"><fieldset data-question="uc9-a03-au03"><legend>Python: o chamador guarda o retorno em uma variável. A função a seguir só imprime o rótulo, e o valor guardado é None.</legend><pre><code>def produzir_rotulo():
+    print(&quot;pronto&quot;)
+
+resultado = produzir_rotulo()</code></pre><div class="question-options"><label class="option"><input type="radio" name="uc9-a03-au03" value="É problema" autocomplete="off">É problema</label><label class="option"><input type="radio" name="uc9-a03-au03" value="Não é problema" autocomplete="off">Não é problema</label></div><p class="selected-text" aria-live="polite"></p><details class="reasoning-hint"><summary>Dica para raciocinar</summary><p>Compare o contrato da chamada com a variável resultado depois da execução, além do texto visível.</p></details></fieldset><label class="discuss"><input class="discussion" type="checkbox" value="uc9-a03-au03" autocomplete="off"> Marcar para discussão</label></article><article class="audit-item" id="uc9-a03-au04"><fieldset data-question="uc9-a03-au04"><legend>Rastreio: o estudante mantém a previsão original numa coluna, coloca a execução noutra e explica a primeira divergência sem apagar o histórico.</legend><div class="question-options"><label class="option"><input type="radio" name="uc9-a03-au04" value="É problema" autocomplete="off">É problema</label><label class="option"><input type="radio" name="uc9-a03-au04" value="Não é problema" autocomplete="off">Não é problema</label></div><p class="selected-text" aria-live="polite"></p><details class="reasoning-hint"><summary>Dica para raciocinar</summary><p>Considere se o registro ajuda alguém a localizar a mudança de entendimento.</p></details></fieldset><label class="discuss"><input class="discussion" type="checkbox" value="uc9-a03-au04" autocomplete="off"> Marcar para discussão</label></article><article class="audit-item" id="uc9-a03-au05"><fieldset data-question="uc9-a03-au05"><legend>Exercício: o arquivo inicial declara None como lacuna didática e mostra PENDENTE antes da implementação. O aluno registra o estado inicial e começa a completar as funções.</legend><div class="question-options"><label class="option"><input type="radio" name="uc9-a03-au05" value="É problema" autocomplete="off">É problema</label><label class="option"><input type="radio" name="uc9-a03-au05" value="Não é problema" autocomplete="off">Não é problema</label></div><p class="selected-text" aria-live="polite"></p><details class="reasoning-hint"><summary>Dica para raciocinar</summary><p>Compare o que o enunciado promete para o inicial com o que ele promete para a entrega concluída.</p></details></fieldset><label class="discuss"><input class="discussion" type="checkbox" value="uc9-a03-au05" autocomplete="off"> Marcar para discussão</label></article><article class="audit-item" id="uc9-a03-au06"><fieldset data-question="uc9-a03-au06"><legend>Verificação: um programa passou em um caso válido; a equipe conclui que ele está correto para todas as entradas, sem investigar recusas ou limites.</legend><div class="question-options"><label class="option"><input type="radio" name="uc9-a03-au06" value="É problema" autocomplete="off">É problema</label><label class="option"><input type="radio" name="uc9-a03-au06" value="Não é problema" autocomplete="off">Não é problema</label></div><p class="selected-text" aria-live="polite"></p><details class="reasoning-hint"><summary>Dica para raciocinar</summary><p>Quais caminhos e condições ficaram sem evidência na execução descrita?</p></details></fieldset><label class="discuss"><input class="discussion" type="checkbox" value="uc9-a03-au06" autocomplete="off"> Marcar para discussão</label></article><article class="audit-item" id="uc9-a03-au07"><fieldset data-question="uc9-a03-au07"><legend>CSS: um trecho longo ganha rolagem horizontal interna. O trecho recebe foco por teclado e sua linha completa continua disponível na tela estreita.</legend><pre><code>pre {
+  max-width: 100%;
+  overflow-x: auto;
+}</code></pre><div class="question-options"><label class="option"><input type="radio" name="uc9-a03-au07" value="É problema" autocomplete="off">É problema</label><label class="option"><input type="radio" name="uc9-a03-au07" value="Não é problema" autocomplete="off">Não é problema</label></div><p class="selected-text" aria-live="polite"></p><details class="reasoning-hint"><summary>Dica para raciocinar</summary><p>Avalie se a parte final pode ser alcançada e lida, em vez de julgar somente a aparência da barra.</p></details></fieldset><label class="discuss"><input class="discussion" type="checkbox" value="uc9-a03-au07" autocomplete="off"> Marcar para discussão</label></article><article class="audit-item" id="uc9-a03-au08"><fieldset data-question="uc9-a03-au08"><legend>CSS: ao estreitar a janela, parte do código é cortada. Não há rolagem nem outro modo de alcançar a parte escondida.</legend><pre><code>pre {
+  white-space: pre;
+  overflow-x: hidden;
+}</code></pre><div class="question-options"><label class="option"><input type="radio" name="uc9-a03-au08" value="É problema" autocomplete="off">É problema</label><label class="option"><input type="radio" name="uc9-a03-au08" value="Não é problema" autocomplete="off">Não é problema</label></div><p class="selected-text" aria-live="polite"></p><details class="reasoning-hint"><summary>Dica para raciocinar</summary><p>Tente localizar o fim da linha pelo teclado e pergunte se existe algum caminho para recuperar o conteúdo.</p></details></fieldset><label class="discuss"><input class="discussion" type="checkbox" value="uc9-a03-au08" autocomplete="off"> Marcar para discussão</label></article><article class="audit-item" id="uc9-a03-au09"><fieldset data-question="uc9-a03-au09"><legend>CSS: ao navegar com Tab num fundo branco, cada botão focado mostra um contorno azul escuro perceptível e as ações continuam operáveis.</legend><pre><code>button:focus-visible {
+  outline: 4px solid #004a8d;
+  outline-offset: 4px;
+}</code></pre><div class="question-options"><label class="option"><input type="radio" name="uc9-a03-au09" value="É problema" autocomplete="off">É problema</label><label class="option"><input type="radio" name="uc9-a03-au09" value="Não é problema" autocomplete="off">Não é problema</label></div><p class="selected-text" aria-live="polite"></p><details class="reasoning-hint"><summary>Dica para raciocinar</summary><p>Observe a função do contorno durante a navegação, e não apenas se ele é o estilo padrão do navegador.</p></details></fieldset><label class="discuss"><input class="discussion" type="checkbox" value="uc9-a03-au09" autocomplete="off"> Marcar para discussão</label></article><article class="audit-item" id="uc9-a03-au10"><fieldset data-question="uc9-a03-au10"><legend>CSS: com preferência por movimento reduzido, a página usa rolagem imediata; o destino dos links e a disponibilidade do conteúdo permanecem iguais.</legend><pre><code>html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}</code></pre><div class="question-options"><label class="option"><input type="radio" name="uc9-a03-au10" value="É problema" autocomplete="off">É problema</label><label class="option"><input type="radio" name="uc9-a03-au10" value="Não é problema" autocomplete="off">Não é problema</label></div><p class="selected-text" aria-live="polite"></p><details class="reasoning-hint"><summary>Dica para raciocinar</summary><p>Separe a transição visual do resultado da ação de navegar até uma seção.</p></details></fieldset><label class="discuss"><input class="discussion" type="checkbox" value="uc9-a03-au10" autocomplete="off"> Marcar para discussão</label></article></div><div class="toolbar"><p id="count" aria-live="polite">0 itens marcados para discussão</p><button class="js-only" id="register">Registrar discussão</button><p id="registered" aria-live="polite">Nenhuma discussão registrada nesta sessão.</p></div><a class="home" data-idoc="home" href="fonte-0003-raciocinio-no-papel-pseudocodigo-e-traducao-para-python.html#auditoria">Conferir conteúdo-base desta seção ↗</a></section><section data-stop="registro" id="registro"><div class="eyebrow">Atividade 4 · Revisar e entregar</div><h2>Mostre o raciocínio que sustenta seu código</h2><aside class="notice environment-guide" aria-label="Onde realizar esta etapa"><strong>Onde no ambiente:</strong> Editor → evidencias.md; papel/tabela; página → identificação, notas e exportação.<p><strong>Ação:</strong> Registrar comparação e revisão individual, exportar e anexar código/documentos no canal da turma.</p><p><strong>O que observar:</strong> Previsão preservada, resultado reproduzível, justificativa e arquivo baixado.</p></aside><p><strong>Objetivo:</strong> tornar a verificação compreensível por outra pessoa. Preencha <a download href="../atividades/A03/evidencias.md" data-download-content="# A03 — Evidências individuais
+
+Nome: ____________________ Turma: __________ Data: __________
+
+## Antes da execução
+
+- Regra que transformei em passos:
+- Como distingui entrada, decisão e saída:
+- Previsões registradas em tabela-rastreio.md:
+- Pseudocódigo salvo em pseudocodigo.md:
+
+## Ambiente e prática
+
+- Python utilizado (versão; não publique caminho pessoal):
+- Pasta conferida no terminal:
+- Comandos executados:
+- Resultado de rastreio.py:
+- Resultado de retirada.py:
+- Se houve falha: comando, mensagem, hipótese e tentativa:
+
+## Comparação e revisão
+
+| Caso | Previsto | Observado | Coincide? | Explicação / correção |
+|---|---|---|---|---|
+| Válido | | | | |
+| Inválido | | | | |
+| Fronteira | | | | |
+
+- Mudança sugerida pelo colega e decisão:
+- Diferença entre print e return que consigo explicar:
+- Próximo passo para A04:
+
+## Entrega
+
+Anexe tabela-rastreio.md, pseudocodigo.md, evidencias.md, sua retirada.py e o registro exportado da página. Se a tabela foi feita no papel, envie foto legível conforme o canal indicado pelo professor. A página não recolhe automaticamente esses arquivos. Não inclua dados reais, ambientes virtuais ou pasta .git.
+">o modelo de evidências</a> e troque explicações com o revisor. Indique uma ambiguidade ou diferença, o caso que a revelou e a mudança antes/depois. Não basta dizer “funcionou”.</p><p><strong>Entregue:</strong> tabela-rastreio.md, pseudocodigo.md, evidencias.md, sua retirada.py e o registro exportado. Se trabalhou no caderno, envie foto legível da tabela pelo canal indicado. A exportação recolhe somente o preenchimento desta página; arquivos da IDE e fotos são anexados separadamente.</p><details><summary>Dica para revisar</summary><p>Seu colega consegue repetir o caso usando apenas as entradas, comandos e observações registradas? O que falta para distinguir uma suposição de algo executado?</p></details><p><strong>Devolutiva:</strong> durante a prática e o fechamento, com revisão orientada e possibilidade de reenvio conforme o professor. Se houve pendência de ambiente, registre-a; não a substitua por uma declaração de execução.</p><p><strong>Próximo encontro:</strong> A04 — ambiente virtual, módulos, exceções e histórico local. Traga uma divergência explicada e uma dúvida. Extensão opcional de hoje: contrastar casos independentes com duas operações encadeadas, indicando explicitamente onde o estado passa a ser atualizado.</p><p><a href="../atividades/A03/evidencias.md" download data-download-content="# A03 — Evidências individuais
+
+Nome: ____________________ Turma: __________ Data: __________
+
+## Antes da execução
+
+- Regra que transformei em passos:
+- Como distingui entrada, decisão e saída:
+- Previsões registradas em tabela-rastreio.md:
+- Pseudocódigo salvo em pseudocodigo.md:
+
+## Ambiente e prática
+
+- Python utilizado (versão; não publique caminho pessoal):
+- Pasta conferida no terminal:
+- Comandos executados:
+- Resultado de rastreio.py:
+- Resultado de retirada.py:
+- Se houve falha: comando, mensagem, hipótese e tentativa:
+
+## Comparação e revisão
+
+| Caso | Previsto | Observado | Coincide? | Explicação / correção |
+|---|---|---|---|---|
+| Válido | | | | |
+| Inválido | | | | |
+| Fronteira | | | | |
+
+- Mudança sugerida pelo colega e decisão:
+- Diferença entre print e return que consigo explicar:
+- Próximo passo para A04:
+
+## Entrega
+
+Anexe tabela-rastreio.md, pseudocodigo.md, evidencias.md, sua retirada.py e o registro exportado da página. Se a tabela foi feita no papel, envie foto legível conforme o canal indicado pelo professor. A página não recolhe automaticamente esses arquivos. Não inclua dados reais, ambientes virtuais ou pasta .git.
+">Baixar modelo de evidências</a></p><div class="grid"><label for="student-name">Nome do aluno<input id="student-name" type="text" maxlength="120" autocomplete="off"></label><label for="student-class">Turma<input id="student-class" type="text" maxlength="80" autocomplete="off"></label><label for="lesson-date">Data da aula<input id="lesson-date" type="date"></label></div><label for="practice-notes">Registros da prática</label><textarea id="practice-notes" autocomplete="off" placeholder="Descreva o que fez, comandos executados, resultados e dificuldades. Use dados fictícios nos exemplos."></textarea><label for="reflection">O que observei e qual será meu próximo passo?</label><textarea id="reflection" autocomplete="off" placeholder="Registre sua reflexão e o próximo passo."></textarea><p>O arquivo reúne suas respostas, situações marcadas, registros da prática e reflexão. Exporte antes de fechar ou recarregar a página. Anexe o arquivo baixado e os arquivos solicitados nesta aula no canal indicado pelo professor.</p><div class="actions js-only"><button id="export" data-export class="primary">Exportar registros da aula</button><button id="reset" class="danger">Limpar sessão</button></div><p id="export-status" aria-live="polite"></p><a class="home" data-idoc="home" href="fonte-0003-raciocinio-no-papel-pseudocodigo-e-traducao-para-python.html#registro">Conferir conteúdo-base desta seção ↗</a></section><h2>Fontes e continuidade</h2><ul><li><a href="https://docs.python.org/3.14/tutorial/controlflow.html">Python 3.14 · condições, laços e funções</a></li><li><a href="https://docs.python.org/3.14/library/stdtypes.html#boolean-operations-and-or-not">Python 3.14 · comparações e operações booleanas</a></li><li><a href="https://docs.python.org/3.14/reference/lexical_analysis.html#indentation">Python 3.14 · indentação e blocos</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-x">MDN · overflow-x</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible">MDN · focus-visible</a></li><li><a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html">W3C · informação além da cor</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion">MDN · preferência por movimento reduzido</a></li></ul><p><a data-idoc="source" href="fonte-0003-raciocinio-no-papel-pseudocodigo-e-traducao-para-python.html">Ler conteúdo-base público em formato linear</a></p></main>
+<footer><p>UC9 · Aplicativos desktop com Python e integração de banco de dados</p><p data-idoc="nonbinding">Esta página apresenta o conteúdo-base da aula; as correções são conduzidas pelo professor. Consulte a fonte pública para conferir cada seção.</p><p><a href="../index.html">Voltar ao índice das aulas</a></p></footer>
+<noscript><p class="notice">JavaScript desativado: leia todo o conteúdo e registre suas respostas em evidencias.md. Contadores e exportação exigem JavaScript.</p></noscript></body></html>
